@@ -1,0 +1,13 @@
+spring init -d=web,data-jpa,devtools,jdbc,mysql,security,ws "-groupId=com.myapp.ems" 
+"-artifactId=ems-backend-boot" -p=war --build=maven --java-version=1.8 --boot-version=2.5.3 
+ems-backend-boot
+
+mvnw spring-boot:run
+
+ Adding Extensions to the CLI
+
+$ spring install com.myapp:spring-boot-cli-extension:2.5.3.RELEASE
+
+$ spring uninstall com.myapp:spring-boot-cli-extension:2.5.3.RELEASE
+
+$ spring uninstall --all

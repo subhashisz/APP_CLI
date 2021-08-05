@@ -1,0 +1,79 @@
+npx create-react-app my-app
+npm install -S yup
+npm install react-bootstrap bootstrap@4.6.0
+npm install axios
+npm add formik
+npm install react-icons --save
+npm install --save react-toastify
+npm install --save react-modal
+npm install react-tooltip
+npm add react-countup
+npm install react-player
+npm i react-charts --save
+npm install react-router-dom
+npm install react-table --save
+npm add date-fns
+npm install react-hook-form
+npm install react-sidebar
+
+// with npm
+npm install @material-ui/core
+
+// with yarn
+yarn add @material-ui/core
+
+npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+
+Since Create React App doesn’t let you override the PostCSS configuration natively, we also need to install CRACO to be able to configure Tailwind:
+
+npm install @craco/craco 
+
+Once it’s installed, update your scripts in your package.json file to use craco instead of react-scripts for all scripts except eject:
+
+
+npm install --save-dev webpack
+# or specific version
+npm install --save-dev webpack@<version>
+
+
+# NPMnpm install @reduxjs/toolkit
+# Yarn yarn add @reduxjs/toolkit
+
+
+# NPMnpm install redux
+# Yarn yarn add redux
+
+npm install react-redux
+npm install --save-dev redux-devtools
+
+# Redux + Plain JS template
+npx create-react-app redux-app --template redux
+
+# Redux + TypeScript template
+npx create-react-app my-app-redux-typescript --template redux-typescript
+
+npm install -g json-server
+npm install -g concurrently
+
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
+    "date-fns": "^2.23.0",
+    "formik": "^2.2.9",
+    "react": "^17.0.2",
+    "react-bootstrap": "^1.6.1",
+    "react-charts": "^2.0.0-beta.7",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-table": "^7.7.0",
+    "react-toastify": "^7.0.4",
+    "styled-components": "^5.3.0",
+    "web-vitals": "^1.1.2",
+    "yup": "^0.32.9"
+  },
