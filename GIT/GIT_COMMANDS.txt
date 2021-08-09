@@ -5,7 +5,50 @@ ADDING LOCAL WORKSPACE TO REPOSITORY
 
 git init
 git commit -m "first commit"
-git branch -M main
+git branch -M master
 git remote add origin https://github.com/subhashisz/ems-backend-boot.git
-git push -u origin main   //master is not working dont know why
+git push -u origin master   //master is not working dont know why
+
+
+change the upstream
+***********************************************************************
+git remote set-url origin https://github.com/subhashisz/ems-backend-boot.git
+
+git push --set-upstream origin master
+
+git branch --set-upstream-to=origin/branch
+
+git branch --set-upstream-to=master
+
+*********************************
+WORKING
+*********************************
+git pull --rebase origin master
+
+git push origin master
+
+
+*********************************
+Remove directory from git and local
+*********************************
+
+You could checkout 'master' with both directories;
+
+git rm -r one-of-the-directories // This deletes from filesystem
+git commit . -m "Remove duplicated directory"
+git push origin <your-git-branch> (typically 'master', but not always)
+
+*********************************
+Remove directory from git but NOT local
+*********************************
+
+As mentioned in the comments, what you usually want to do is remove this directory from git but not
+delete it entirely from the filesystem (local)
+
+In that case use:
+
+git rm -r --cached myFolder
+
+
+
 
