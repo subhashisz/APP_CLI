@@ -4,9 +4,10 @@ ADDING LOCAL WORKSPACE TO REPOSITORY
 ***********************************************************************
 
 git init
-git commit -m "first commit"
+git add .
+git commit -m "first commit"                 
 git branch -M master
-git remote add origin https://github.com/subhashisz/ems-backend-boot.git
+git remote add origin https://github.com/subhashisz/git_practices.git
 git push -u origin master   //master is not working dont know why
 
 
