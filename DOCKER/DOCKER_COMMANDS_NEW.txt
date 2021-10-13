@@ -39,6 +39,11 @@ docker run --name mysql-standalone -e MYSQL_ROOT_PASSWORD=hello -e MYSQL_DATABAS
 
 docker container run -it --name ubuntu ubuntu
 
+docker run -it --rm -p 8888:8080 tomcat:9.0
+
+docker run -it --rm -d -p 8888:8888 tomcat:9.0
+
+
 ******************************************************************************************************************************************************
 
 docker container logs and details
@@ -88,8 +93,119 @@ NOTE: alpine doesnot have a bash so sh
 ls -al => gives processes running under an image
 ps aux => 
 
+
+
 ********************************************************************************************************************************************************
 
-docker container Getting shell inside (25)
+docker container NETWORK
 ********************************************************************************************************************************************************
+
+
+
+********************************************************************************************************************************************************
+
+docker container NETWORK CLI MANAGEMENT
+********************************************************************************************************************************************************
+
+docker network ls
+
+docker network inspect 
+
+docker network inspect bridge
+
+docker network create --driver
+
+docker network connect
+
+docker network disconnect
+
+docker network create my-app-net 
+
+docker container run -d -name new_nginx 
+
+Adding image to a netwok
+***************************
+
+docker container run -d --name new-nginx --network my-app-net  nginx
+
+docker container run -d --name my-nginx --network my-app-net  nginx
+
+docker container run -d --name my-nginx1 --network my-app-net nginx:alpine
+
+docker container run -d --name my-nginx2 --network my-app-net nginx:alpine
+
+docker container connect new-network old-network  
+
+********************************************************************************************************************************************************
+
+docker container NETWORK DNS
+********************************************************************************************************************************************************
+
+docker container exec -it new-nginx ping my-nginx   // for pinging one container from another container
+
+docker container exec -it my-nginx ping new-nginx 
+
+NOTE:
+1. Default bridge network does not a default DNS network built in 
+2. Containers should not relay on ip address to talking to each other(inter communication) , insted they can use name.
+
+if ping not found Error : OCI runtime exec failed: exec failed: container_linux.go:380: starting container process caused: exec: "ping": executable file not found in $PATH: unknown. Then
+
+docker container exec -it my-nginx bash
+apt update
+apt install iputils-ping
+exit
+
+
+create a new image inside container 
+docker container run --rm -it -d centos:7 bash
+
+docker container --network -alias
+
+docker network create dude
+docker container run -d --net  dude --net-alias search elasticsearch:2
+
+
+********************************************************************************************************************************************************
+DOCKER IMAGES
+********************************************************************************************************************************************************
+
+
+
+
+
+
+
+
+                               
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
