@@ -4,14 +4,11 @@ Docker GUI
 sudo usermod -aG docker subhhashis => Adding to user group so that it dont ask for sudo
 
 *************
-DOCKER GUI:
+DOCKER GUI:GOOD
 *************
-Step 1: 
-sudo docker volume create portainer_data
+Step 1: sudo docker volume create portainer_data
 
-Step 2: 
-
-sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+Step 2: sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 
 Step 3: open browser and hit the url : http://localhost:9000/
 
@@ -169,6 +166,45 @@ docker container run -d --net  dude --net-alias search elasticsearch:2
 ********************************************************************************************************************************************************
 DOCKER IMAGES
 ********************************************************************************************************************************************************
+
+docker history image-name  => shows the changes(layers) to that particular image.
+
+docker image inspect image-name  => gives the metadata
+
+
+docker image tag nginx subhashisz/nginx   => to tag an existing image 
+docker image push subhashisz/nginx:latest        => to push image to your account
+
+docker image tag nginx subhashisz/nginx:1.05
+
+docker image push subhashisz/tomcat:latest
+
+docker login -u subhashisz -p $sara5sub docker.io => not working
+
+
+docker image tag httpd subhashisz/httpd:version1.0
+
+docker image tag nginx subhashisz/nginx:latest
+
+docker login
+docker logout
+
+docker top         =>
+docker trust       =>
+docker unpause     =>
+docker update      =>
+docker version     =>
+docker volume      =>
+docker wait        =>
+
+app attach build builder buildx checkpoint commit compose config container context cp create diff event exec export history image images import info inspect kill load
+login logout logs mainfeast network node pause plugin port ps push pull rename restart rm rmi run save search secret service stack start stats stop swarm system
+
+cat .docker/config.json => Displays config.json of the logged user, where the auth token of the user is mentioned.
+
+
+
+
 
 
 
