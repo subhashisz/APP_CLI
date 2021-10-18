@@ -202,6 +202,9 @@ login logout logs mainfeast network node pause plugin port ps push pull rename r
 
 cat .docker/config.json => Displays config.json of the logged user, where the auth token of the user is mentioned.
 
+docker-compose up
+docker-compose down -v  => disconnect and removes the volume
+
 
 
 
