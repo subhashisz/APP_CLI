@@ -1,1 +1,5 @@
 To change the command prompt : PS1='\W\$ '
+ls -al
+cat
+ps aux
+echo
