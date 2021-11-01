@@ -15,6 +15,6 @@ docker system df : Gives details about docker in that particular system, like ho
 SPRING BOOT
 *******************************************************************************************************************************
 
-docker run -d -p  9411:9411 openzipkin/zipkin:2.23
+docker run -d -p  9411:9411 --name zipkin-server openzipkin/zipkin:2.23
 
 docker run -d -p 9411:9411 openzipkin/zipkin

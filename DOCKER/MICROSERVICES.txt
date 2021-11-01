@@ -1,0 +1,45 @@
+
+
+
+FROM openjdk:latest
+
+ADD target/currency-exchange-0.0.1-SNAPSHOT.jar currency-exchange.jar
+
+ENTRYPOINT ["java","-jar","currency-exchange.jar"]
+
+EXPOSE  8000
+
+
+docker run -p 8000:8000 --name currency-exchange -d subhashisz/currency-exchange 
+
+
+FROM openjdk:latest
+
+ADD target/currency-conversion-0.0.1-SNAPSHOT.jar currency-conversion.jar
+
+ENTRYPOINT ["java","-jar","currency-conversion.jar"]
+
+EXPOSE  8100
+
+docker run -p 8100:8100 --name currency-conversion -d subhashisz/currency-conversion
+
+FROM openjdk:latest
+
+ADD target/naming-server-0.0.1-SNAPSHOT.jar naming-server.jar
+
+ENTRYPOINT ["java","-jar","naming-server.jar"]
+
+EXPOSE  8761
+
+docker run -p 8761:8761 --name naming-server -d subhashisz/naming-server
+
+FROM openjdk:latest
+
+ADD target/api-gateway-0.0.1-SNAPSHOT.jar api-gateway.jar
+
+ENTRYPOINT ["java","-jar","api-gateway.jar"]
+
+EXPOSE  8765
+
+
+docker run -p 8765:8765 --name api-gateway -d subhashisz/api-gateway

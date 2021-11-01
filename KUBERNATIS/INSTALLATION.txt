@@ -1,0 +1,22 @@
+
+Install MicroK8s on Linux
+1. sudo snap install microk8s --classic
+
+Check the status while Kubernetes starts
+2. microk8s status --wait-ready
+
+Turn on the services you want
+3. microk8s enable dashboard dns registry istio
+
+Start using Kubernetes
+4. microk8s kubectl get all --all-namespaces
+
+Access the Kubernetes dashboard
+5. microk8s dashboard-proxy
+
+Start and stop Kubernetes to save battery
+6.  microk8s start   /   microk8s stop
+
+Kubernetes is a collection of system services that talk to each other all the time. If you don’t need them 
+running in the background then you will save battery by stopping them. microk8s start and microk8s stop will do 
+the work for you.
