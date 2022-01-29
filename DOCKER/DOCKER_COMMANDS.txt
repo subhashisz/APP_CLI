@@ -1,7 +1,7 @@
 docker container ls -a
 docker image ls -a
 docker images
-docker inspect image-name
+docker inspect image-name   
 
 docker events : displays all the events happning in the container 
 docker top: What are the top process which are running in the container.
