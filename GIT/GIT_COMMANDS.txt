@@ -56,5 +56,16 @@ git rm -r --cached myFolder
 my oth token:  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
 
 
+Get your access token (see the section in the cheat sheet if you need the GitHub or Gitea instructions
+for that) and set it in an environment variable (both for local development and deployment):
+
+MY_GIT_TOKEN=xxxxxxxxxxxxxxxx
+For GitHub, copy and run these lines verbatim:
+
+git config --global url."https://api:$MY_GIT_TOKEN@github.com/" .insteadOf "https://github.com/"
+git config --global url."https://ssh:$MY_GIT_TOKEN@github.com/" .insteadOf "ssh://git@github.com/"
+git config --global url."https://git:$MY_GIT_TOKEN@github.com/" .insteadOf "git@github.com:"
+
+
 
 
