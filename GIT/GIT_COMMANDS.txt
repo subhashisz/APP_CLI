@@ -53,7 +53,7 @@ In that case use:
 
 git rm -r --cached myFolder
 
-my oth token:  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
+my oth token:  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
 
 
 Get your access token (see the section in the cheat sheet if you need the GitHub or Gitea instructions
